@@ -40,7 +40,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Таблица{" +
+        return "" +
                 "id = " + id +
                 " ФИО = '" + fio + '\'' +
                 ", Отдел = " + department +
@@ -93,5 +93,9 @@ public class Employee {
         System.out.println("D. Максимальная зарплата среди данных сотрудников составляет " + maxSalary + " рублей, получатель: " + spisok[n].fio);
         //Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
         System.out.println("E.Средняя зарплата составляет " + summ / spisok.length + "рублей");
+      //Получить Ф. И. О. всех сотрудников (вывести в консоль).
+        System.out.println("F. ФИО всех сотрудников: ");
+        for (Employee employee : spisok) System.out.println(employee.fio);
+
     }
 }
