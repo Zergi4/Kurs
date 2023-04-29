@@ -1,11 +1,11 @@
 import org.w3c.dom.ls.LSOutput;
 
 public class Employee {
-    private String fio;
+    private final String fio;
     private int department;
     private float salary;
     private static int counter;
-    private int id;
+    private final int id;
 
     //Конструктор
     public Employee(String fio, int department, float salary) {
