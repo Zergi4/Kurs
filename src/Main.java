@@ -19,13 +19,24 @@ public class Main {
         //a.Получить список всех сотрудников со всеми имеющимися по ним данными (вывести в консоль значения всех полей (toString)).
         System.out.println("A.");
         printSpisok(spisok);
-
+        //b.Посчитать сумму затрат на зарплаты в месяц.
+        System.out.println("Б. Сумма затрат на зарплаты в месяц составляет " + summaSalary(spisok) + " рублей.");
     }
 
 
     public static void printSpisok(Employee[] spisok1) {
-        for (int i = 0; i < spisok1.length; i++) {
-            System.out.println(spisok1[i]);
+        for (Employee employee : spisok1) {
+            System.out.println(employee);
         }
     }
+
+    //b.Посчитать сумму затрат на зарплаты в месяц.
+    public static float summaSalary(Employee[] spisok1) {
+        float summ = 0.0f;
+        for (Employee employee : spisok1) {
+            summ += employee.getSalary();
+        }
+        return summ;
+    }
+
 }
