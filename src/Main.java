@@ -20,7 +20,10 @@ public class Main {
         System.out.println("A.");
         printSpisok(spisok);
         //b.Посчитать сумму затрат на зарплаты в месяц.
-        System.out.println("Б. Сумма затрат на зарплаты в месяц составляет " + summaSalary(spisok) + " рублей.");
+        System.out.println("B. Сумма затрат на зарплаты в месяц составляет " + summaSalary(spisok) + " рублей.");
+        //c. Найти сотрудника с минимальной зарплатой.
+        System.out.println("C. Сотрудник с минимальной зарплатой это " + getMinSalary(spisok));
+
     }
 
 
@@ -38,5 +41,29 @@ public class Main {
         }
         return summ;
     }
+    // Найти сотрудника с минимальной зарплатой.
 
+    public static Employee getMinSalary(Employee[] spisok1) {
+        float minSalary = Integer.MAX_VALUE;
+        int n = 0;
+        for (int i = 0; i < spisok1.length; i++) {
+            if (spisok1[i].getSalary() < minSalary) {
+                minSalary = spisok1[i].getSalary();
+                n = i;
+            }
+        }
+        return spisok1[n];
+    }
+
+
+    //      System.out.println("С.Сотрудник с минимальной зарплатой " + minSalary + " рублей, его ФИО: " + spisok[n].fio);
+    // n = 0;
+    //  float maxSalary = Integer.MIN_VALUE;
+    //    for (int i = 0; i < spisok.length; i++) {
+    //   if (spisok[i].salary > maxSalary) {
+    //      maxSalary = spisok[i].salary;
+    //     n = i;
+    //   }
+    //  }
+    //   System.out.println("D. Максимальная зарплата среди данных сотрудников составляет " + maxSalary + " рублей, получатель: " + spisok[n].fio);
 }
